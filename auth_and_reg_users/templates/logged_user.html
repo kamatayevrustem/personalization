@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Успешная авторизация{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="header"></div>
+        <p>Привет, {{ user }}</p>
+        <p><a href="/signup">Зарегистрировать нового пользователя</a></p>
+        <p><a href="/login">Авторизоваться под новым именем</a></p>
+        <p><a href="/logout">Выйти</a></p>
+
+
+    </div>
+{% endblock %}

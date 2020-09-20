@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Угадай число{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <h1>Игра "Угадай число"</h1>
+        </div>
+
+
+        <div>
+            <form action="/" method="post">
+                                                             {% csrf_token %}
+
+                <label for="guess_number">Угадайте загаданное число: </label>
+                <input id="guess_number" type="text" name="guess_number" value="{{ hidden_number }}">
+                <input type="submit" value="OK">
+            </form>
+        </div>
+
+        <div>
+            {{advice}}
+        </div>
+
+
+    </div>
+{% endblock %}

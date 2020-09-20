@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Угадай число{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <h1>Статус игры</h1>
+        </div>
+        <div>
+            <p>Загаданное число: {{secret_number}}</p>
+            <p>Ваше число угадали с {{attempts}} попыток </p>
+        </div>
+
+
+    </div>
+{% endblock %}
